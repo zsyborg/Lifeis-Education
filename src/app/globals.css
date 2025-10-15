@@ -1,60 +1,8 @@
 @import "tailwindcss";
 
-/* Light mode variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #2563eb;
-  --primary-foreground: #f8fafc;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
-  --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #2563eb;
-  --chart-1: #2563eb;
-  --chart-2: #10b981;
-  --chart-3: #f59e0b;
-  --chart-4: #ef4444;
-  --chart-5: #8b5cf6;
-  --radius: 0.5rem;
-}
-
-/* Dark mode variables */
-.dark {
-  --background: #020617;
-  --foreground: #f8fafc;
-  --card: #0f172a;
-  --card-foreground: #f8fafc;
-  --popover: #0f172a;
-  --popover-foreground: #f8fafc;
-  --primary: #3b82f6;
-  --primary-foreground: #f8fafc;
-  --secondary: #1e293b;
-  --secondary-foreground: #f8fafc;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #1e293b;
-  --accent-foreground: #f8fafc;
-  --destructive: #dc2626;
-  --destructive-foreground: #f8fafc;
-  --border: #1e293b;
-  --input: #1e293b;
-  --ring: #3b82f6;
-  --chart-1: #3b82f6;
-  --chart-2: #22c55e;
-  --chart-3: #facc15;
-  --chart-4: #f87171;
-  --chart-5: #a855f7;
 }
 
 @theme inline {
@@ -65,11 +13,10 @@
   --breakpoint-xs: 475px;
 }
 
-/* Apply system preference for users without saved preference */
 @media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: #020617;
-    --foreground: #f8fafc;
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
@@ -77,10 +24,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Smooth transitions for theme changes */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+.neu{
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  19px 19px 38px #b1b1b1,
+              -19px -19px 38px #ffffff;
+}
+
+
+.neulight{
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  9px 9px 18px #b1b1b1,
+              -9px -9px 18px #ffffff;
 }

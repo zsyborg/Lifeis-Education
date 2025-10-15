@@ -151,7 +151,7 @@ const mockCourses = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -209,8 +209,8 @@ export default function Home() {
         <section>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 lg:mb-10">
             <div className="mb-4 sm:mb-0">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">🔥 Trending Now</h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">Most popular courses this week</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">🔥 Trending Now</h2>
+              <p className="text-base sm:text-lg text-gray-600">Most popular courses this week</p>
             </div>
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm sm:text-base">
               View All →
@@ -227,8 +227,8 @@ export default function Home() {
         <section>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 lg:mb-10">
             <div className="mb-4 sm:mb-0">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">🎁 Free Courses</h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">High-quality education at zero cost</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">🎁 Free Courses</h2>
+              <p className="text-base sm:text-lg text-gray-600">High-quality education at zero cost</p>
             </div>
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm sm:text-base">
               View All →
@@ -245,8 +245,8 @@ export default function Home() {
         <section>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 lg:mb-10">
             <div className="mb-4 sm:mb-0">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">✨ Recently Added</h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">Fresh content from our instructors</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">✨ Recently Added</h2>
+              <p className="text-base sm:text-lg text-gray-600">Fresh content from our instructors</p>
             </div>
             <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm sm:text-base">
               View All →
@@ -260,7 +260,7 @@ export default function Home() {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+        <section className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">📚 Stay Updated</h2>
           <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Get the latest courses, exclusive deals, and learning tips delivered to your inbox
@@ -269,7 +269,7 @@ export default function Home() {
             <input 
               type="email" 
               placeholder="Enter your email"
-              className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-sm text-white placeholder-gray-300 dark:placeholder-gray-400 border border-white/20 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold hover:shadow-lg transition-all duration-200">
               Subscribe
