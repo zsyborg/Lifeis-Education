@@ -4,113 +4,149 @@ import CourseCard from "@/components/course/CourseCard";
 const mockCourses = [
   {
     id: "1",
-    title: "Complete React Developer Course with Redux, Hooks, and GraphQL",
-    description: "Learn React from the ground up and build amazing web applications with the latest features including Hooks, Context API, and more.",
-    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    title: "The 7-Figure Sales System - Master High-Ticket Closing",
+    description: "Learn proven frameworks to master sales psychology, handle objections, and close high-ticket deals consistently. Transform from amateur to elite closer.",
+    thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
     instructor: {
-      name: "John Doe",
+      name: "Marcus Johnson",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face&auto=format&q=60"
     },
-    duration: "14h 30m",
-    rating: 4.8,
-    ratingCount: 12485,
-    price: 89.99,
-    originalPrice: 129.99,
+    duration: "12h 45m",
+    rating: 4.9,
+    ratingCount: 8923,
+    price: 197.99,
+    originalPrice: 497.99,
     isFree: false,
     level: "Intermediate" as const,
-    category: "Web Development",
-    studentCount: 45230
+    category: "Sales",
+    studentCount: 34210
   },
   {
     id: "2",
-    title: "Python for Beginners - Complete Python Programming Masterclass",
-    description: "Master Python programming from basics to advanced concepts. Perfect for beginners with no prior programming experience.",
-    thumbnail: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    title: "Atomic Habits Masterclass - Build Systems for Success",
+    description: "Master the science of habit formation and behavior change. Create systems that make success inevitable and transform your daily routines.",
+    thumbnail: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
     instructor: {
-      name: "Sarah Wilson"
+      name: "Dr. Sarah Chen"
     },
-    duration: "18h 45m",
-    rating: 4.9,
-    ratingCount: 8967,
+    duration: "8h 30m",
+    rating: 4.8,
+    ratingCount: 12456,
     price: 0,
     isFree: true,
     level: "Beginner" as const,
-    category: "Programming",
-    studentCount: 67890
+    category: "Self Improvement",
+    studentCount: 89234
   },
   {
     id: "3",
-    title: "Advanced Node.js and Express Development",
-    description: "Build scalable backend applications with Node.js, Express, MongoDB, and deploy to production.",
-    thumbnail: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    title: "Startup Founder's Playbook - Zero to Million Dollar Business",
+    description: "The complete roadmap from idea validation to scaling your business. Learn fundraising, team building, and growth strategies from successful founders.",
+    thumbnail: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
     instructor: {
-      name: "Mike Johnson",
+      name: "Alex Rodriguez",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format&q=60"
     },
-    duration: "12h 15m",
-    rating: 4.7,
-    ratingCount: 5643,
-    price: 74.99,
-    originalPrice: 99.99,
+    duration: "15h 20m",
+    rating: 4.9,
+    ratingCount: 6789,
+    price: 297.99,
+    originalPrice: 597.99,
     isFree: false,
     level: "Advanced" as const,
-    category: "Backend Development",
-    studentCount: 23456
+    category: "Entrepreneurship",
+    studentCount: 18945
   },
   {
     id: "4",
-    title: "UI/UX Design Fundamentals with Figma",
-    description: "Learn the principles of user interface and user experience design using Figma. Create stunning designs that users love.",
-    thumbnail: "https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    title: "The Psychology of Persuasion - Influence and Win",
+    description: "Master the art of persuasion and influence in business and life. Learn psychological principles that drive human decision-making.",
+    thumbnail: "https://images.unsplash.com/photo-1551836026-d5c4d90d3596?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
     instructor: {
-      name: "Emily Chen",
+      name: "Dr. Michael Tan",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616c2b73c8c?w=40&h=40&fit=crop&crop=face&auto=format&q=60"
     },
-    duration: "10h 20m",
-    rating: 4.6,
-    ratingCount: 3421,
-    price: 59.99,
+    duration: "9h 15m",
+    rating: 4.7,
+    ratingCount: 5432,
+    price: 147.99,
     isFree: false,
-    level: "Beginner" as const,
-    category: "Design",
-    studentCount: 15678
+    level: "Intermediate" as const,
+    category: "Sales",
+    studentCount: 23456
   },
   {
     id: "5",
-    title: "Data Science with Python and Machine Learning",
-    description: "Comprehensive course covering data analysis, visualization, and machine learning using Python, pandas, and scikit-learn.",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    title: "Mindset Mastery - Reprogram Your Brain for Success",
+    description: "Break through limiting beliefs and develop the mindset of high achievers. Learn neuroscience-backed techniques for peak performance.",
+    thumbnail: "https://images.unsplash.com/photo-1591696205602-2f950c417dad?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
     instructor: {
-      name: "Dr. Alex Kumar"
+      name: "Lisa Park"
     },
-    duration: "22h 10m",
+    duration: "7h 45m",
     rating: 4.8,
-    ratingCount: 7890,
-    price: 119.99,
-    originalPrice: 159.99,
+    ratingCount: 8921,
+    price: 127.99,
+    originalPrice: 227.99,
     isFree: false,
-    level: "Intermediate" as const,
-    category: "Data Science",
-    studentCount: 34567
+    level: "Beginner" as const,
+    category: "Self Improvement",
+    studentCount: 45678
   },
   {
     id: "6",
-    title: "Digital Marketing Mastery - Complete Course",
-    description: "Learn SEO, social media marketing, content marketing, and paid advertising to grow your business online.",
+    title: "Digital Entrepreneurship - Build Your Online Empire",
+    description: "Learn to identify profitable niches, create digital products, and build automated online businesses that generate passive income.",
     thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
     instructor: {
-      name: "Lisa Rodriguez",
+      name: "Jordan Patel",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face&auto=format&q=60"
     },
-    duration: "16h 40m",
-    rating: 4.5,
-    ratingCount: 2156,
+    duration: "14h 20m",
+    rating: 4.6,
+    ratingCount: 3456,
     price: 0,
     isFree: true,
     level: "Beginner" as const,
-    category: "Marketing",
-    studentCount: 28934
+    category: "Entrepreneurship",
+    studentCount: 56789
   },
+  {
+    id: "7",
+    title: "Cold Calling Domination - From Rejection to Revenue",
+    description: "Transform cold calls into warm conversations and closed deals. Master scripts, tonality, and objection handling that actually works.",
+    thumbnail: "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    instructor: {
+      name: "Brian Thompson",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face&auto=format&q=60"
+    },
+    duration: "6h 30m",
+    rating: 4.7,
+    ratingCount: 2987,
+    price: 87.99,
+    originalPrice: 187.99,
+    isFree: false,
+    level: "Intermediate" as const,
+    category: "Sales",
+    studentCount: 15632
+  },
+  {
+    id: "8",
+    title: "The 5 AM Miracle - Productivity Secrets of Billionaires",
+    description: "Discover the morning routines and productivity systems used by the world's most successful people to 10x your daily output.",
+    thumbnail: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=500&h=300&fit=crop&crop=entropy&auto=format&q=60",
+    instructor: {
+      name: "Rachel Simmons"
+    },
+    duration: "5h 15m",
+    rating: 4.9,
+    ratingCount: 11234,
+    price: 67.99,
+    isFree: false,
+    level: "Beginner" as const,
+    category: "Self Improvement",
+    studentCount: 67845
+  }
 ];
 
 export default function Home() {

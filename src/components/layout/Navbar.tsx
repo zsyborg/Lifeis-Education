@@ -42,10 +42,7 @@ export default function Navbar({ onMenuToggle }: NavbarProps) {
               <Bars3Icon className="h-5 w-5 text-gray-700" />
             </button>
             <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-1.5 sm:p-2 rounded-xl">
-                <BookOpenIcon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <span className="text-lg sm:text-xl font-bold text-gray-900 hidden xs:block">EduTube</span>
+              <img src="/logo.png" alt="Logo" className="h-8 w-8" />
             </Link>
           </div>
 

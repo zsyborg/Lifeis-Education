@@ -14,7 +14,11 @@ import {
   ChartBarIcon,
   PaintBrushIcon,
   SpeakerWaveIcon,
-  BriefcaseIcon
+  BriefcaseIcon,
+  CurrencyDollarIcon,
+  UserPlusIcon,
+  RocketLaunchIcon,
+  LightBulbIcon
 } from '@heroicons/react/24/outline'
 import { cn } from '@/lib/utils'
 
@@ -27,12 +31,12 @@ const navigation = [
 ]
 
 const categories = [
-  { name: 'Programming', href: '/category/programming', icon: CodeBracketIcon, color: 'text-blue-600' },
-  { name: 'Web Development', href: '/category/web-development', icon: ComputerDesktopIcon, color: 'text-green-600' },
-  { name: 'Data Science', href: '/category/data-science', icon: ChartBarIcon, color: 'text-purple-600' },
-  { name: 'Design', href: '/category/design', icon: PaintBrushIcon, color: 'text-pink-600' },
-  { name: 'Marketing', href: '/category/marketing', icon: SpeakerWaveIcon, color: 'text-orange-600' },
-  { name: 'Business', href: '/category/business', icon: BriefcaseIcon, color: 'text-indigo-600' },
+{ name: 'Sales', href: '/category/sales', icon: CurrencyDollarIcon, color: 'text-green-600' },
+{ name: 'Self Improvement', href: '/category/self-improvement', icon: UserPlusIcon, color: 'text-blue-600' },
+{ name: 'Entrepreneurship', href: '/category/entrepreneurship', icon: RocketLaunchIcon, color: 'text-purple-600' },
+{ name: 'Mindset', href: '/category/mindset', icon: LightBulbIcon, color: 'text-yellow-600' },
+{ name: 'Productivity', href: '/category/productivity', icon: ClockIcon, color: 'text-orange-600' },
+{ name: 'Business Strategy', href: '/category/business-strategy', icon: ChartBarIcon, color: 'text-indigo-600' },
 ]
 
 interface SidebarProps {
@@ -146,19 +150,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
             </nav>
           </div>
 
-          {/* Upgrade Banner */}
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-blue-100">
-            <div className="text-center">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                <AcademicCapIcon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Go Pro!</h3>
-              <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">Get unlimited access to all premium courses</p>
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-2 px-3 sm:px-4 rounded-xl hover:shadow-lg transition-all duration-200 text-sm">
-                Upgrade Now
-              </button>
-            </div>
-          </div>
+        
         </div>
       </aside>
     </>
