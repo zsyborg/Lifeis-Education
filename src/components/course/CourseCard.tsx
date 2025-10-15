@@ -65,20 +65,20 @@ export default function CourseCard({ course, variant = 'default' }: CourseCardPr
             </div>
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors line-clamp-2">
               {course.title}
             </h3>
-            <p className="text-sm text-gray-500 mt-1">{course.instructor.name}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{course.instructor.name}</p>
             <div className="flex items-center mt-1 space-x-2">
               {renderStars(course.rating)}
-              <span className="text-xs text-gray-500">({course.ratingCount})</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">({course.ratingCount})</span>
             </div>
             <div className="flex items-center justify-between mt-2">
-              <span className="text-sm font-bold text-gray-900">
+              <span className="text-sm font-bold text-gray-900 dark:text-gray-100">
                 {course.isFree ? 'Free' : `$${course.price}`}
               </span>
               {!course.isFree && course.originalPrice && (
-                <span className="text-xs text-gray-500 line-through">
+                <span className="text-xs text-gray-500 dark:text-gray-400 line-through">
                   ${course.originalPrice}
                 </span>
               )}
@@ -91,7 +91,7 @@ export default function CourseCard({ course, variant = 'default' }: CourseCardPr
 
   return (
     <Link href={`/course/${course.id}`} className="group block">
-      <div className="bg-white rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-200">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600">
         <div className="relative">
           <div className="aspect-video overflow-hidden">
             <img
@@ -101,8 +101,8 @@ export default function CourseCard({ course, variant = 'default' }: CourseCardPr
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 sm:p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-              <PlayIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-900" />
+            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full p-3 sm:p-4 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+              <PlayIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-900 dark:text-gray-100" />
             </div>
           </div>
           <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
@@ -130,14 +130,14 @@ export default function CourseCard({ course, variant = 'default' }: CourseCardPr
         
         <div className="p-4 sm:p-6">
           <div className="mb-2 sm:mb-3">
-            <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">{course.category}</span>
+            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">{course.category}</span>
           </div>
           
-          <h3 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2 mb-2 sm:mb-3 leading-tight">
+          <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors line-clamp-2 mb-2 sm:mb-3 leading-tight">
             {course.title}
           </h3>
           
-          <p className="text-sm text-gray-600 line-clamp-2 mb-3 sm:mb-4 leading-relaxed hidden sm:block">
+          <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-3 sm:mb-4 leading-relaxed hidden sm:block">
             {course.description}
           </p>
           
@@ -146,14 +146,14 @@ export default function CourseCard({ course, variant = 'default' }: CourseCardPr
               <img
                 src={course.instructor.avatar}
                 alt={course.instructor.name}
-                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full ring-2 ring-gray-100"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full ring-2 ring-gray-100 dark:ring-gray-600"
               />
             ) : (
               <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
                 <UserIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
               </div>
             )}
-            <span className="text-sm font-medium text-gray-700">{course.instructor.name}</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{course.instructor.name}</span>
           </div>
           
           <div className="flex items-center justify-between mb-3 sm:mb-4">
@@ -164,35 +164,35 @@ export default function CourseCard({ course, variant = 'default' }: CourseCardPr
                     {i < Math.floor(course.rating) ? (
                       <StarSolidIcon className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" />
                     ) : (
-                      <StarIcon className="h-3 w-3 sm:h-4 sm:w-4 text-gray-300" />
+                      <StarIcon className="h-3 w-3 sm:h-4 sm:w-4 text-gray-300 dark:text-gray-600" />
                     )}
                   </span>
                 ))}
               </div>
-              <span className="text-xs sm:text-sm font-medium text-gray-600">
+              <span className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-400">
                 {course.rating}
               </span>
-              <span className="text-xs sm:text-sm text-gray-400 hidden sm:inline">
+              <span className="text-xs sm:text-sm text-gray-400 dark:text-gray-500 hidden sm:inline">
                 ({course.ratingCount.toLocaleString()})
               </span>
             </div>
-            <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500">
+            <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               <UserIcon className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="font-medium">{course.studentCount > 1000 ? `${Math.floor(course.studentCount/1000)}k` : course.studentCount}</span>
             </div>
           </div>
           
-          <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-gray-100">
+          <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-gray-100 dark:border-gray-700">
             <div className="flex items-center space-x-2 sm:space-x-3">
               {course.isFree ? (
                 <span className="text-xl sm:text-2xl font-bold text-emerald-600">Free</span>
               ) : (
                 <>
-                  <span className="text-xl sm:text-2xl font-bold text-gray-900">
+                  <span className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">
                     ${course.price}
                   </span>
                   {course.originalPrice && (
-                    <span className="text-base sm:text-lg text-gray-400 line-through">
+                    <span className="text-base sm:text-lg text-gray-400 dark:text-gray-500 line-through">
                       ${course.originalPrice}
                     </span>
                   )}

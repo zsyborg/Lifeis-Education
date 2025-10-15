@@ -59,7 +59,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
       
       {/* Sidebar */}
       <aside className={cn(
-        'fixed left-0 top-16 h-[calc(100vh-4rem)] bg-white/95 backdrop-blur-sm border-r border-gray-200 transition-transform duration-300 z-50',
+        'fixed left-0 top-16 h-[calc(100vh-4rem)] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-r border-gray-200 dark:border-gray-700 transition-transform duration-300 z-50',
         isOpen ? 'translate-x-0' : '-translate-x-full',
         'w-64 sm:w-72 overflow-y-auto lg:translate-x-0'
       )}>
@@ -77,13 +77,13 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                     className={cn(
                       'flex items-center px-3 sm:px-4 py-2.5 sm:py-3 text-sm font-medium rounded-xl sm:rounded-2xl transition-all duration-200',
                       isActive 
-                        ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 shadow-sm border border-blue-100' 
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                        ? 'bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 shadow-sm border border-blue-100 dark:border-blue-800' 
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100'
                     )}
                   >
                     <item.icon className={cn(
                       'mr-3 sm:mr-4 h-5 w-5',
-                      isActive ? 'text-blue-600' : 'text-gray-500'
+                      isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400'
                     )} />
                     <span className="text-sm sm:text-base">{item.name}</span>
                   </Link>
@@ -94,7 +94,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
 
           {/* Categories */}
           <div>
-            <h3 className="px-3 sm:px-4 text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 sm:mb-4">
+            <h3 className="px-3 sm:px-4 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3 sm:mb-4">
               Explore Topics
             </h3>
             <nav className="space-y-1 sm:space-y-2">
@@ -108,17 +108,17 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                     className={cn(
                       'flex items-center px-3 sm:px-4 py-2.5 sm:py-3 text-sm font-medium rounded-xl sm:rounded-2xl transition-all duration-200 group',
                       isActive 
-                        ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 shadow-sm border border-blue-100' 
-                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                        ? 'bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 shadow-sm border border-blue-100 dark:border-blue-800' 
+                        : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100'
                     )}
                   >
                     <div className={cn(
                       'mr-3 sm:mr-4 p-1.5 sm:p-2 rounded-lg sm:rounded-xl transition-colors',
-                      isActive ? 'bg-white shadow-sm' : 'bg-gray-100 group-hover:bg-gray-200'
+                      isActive ? 'bg-white dark:bg-gray-800 shadow-sm' : 'bg-gray-100 dark:bg-gray-700 group-hover:bg-gray-200 dark:group-hover:bg-gray-600'
                     )}>
                       <category.icon className={cn(
                         'h-3.5 w-3.5 sm:h-4 sm:w-4',
-                        isActive ? category.color : 'text-gray-500 group-hover:text-gray-700'
+                        isActive ? category.color : 'text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300'
                       )} />
                     </div>
                     <span className="text-sm sm:text-base">{category.name}</span>
@@ -129,7 +129,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
           </div>
 
           {/* Settings */}
-          <div className="pt-3 sm:pt-4 border-t border-gray-200">
+          <div className="pt-3 sm:pt-4 border-t border-gray-200 dark:border-gray-700">
             <nav>
               <Link
                 href="/settings"
@@ -137,13 +137,13 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
                 className={cn(
                   'flex items-center px-3 sm:px-4 py-2.5 sm:py-3 text-sm font-medium rounded-xl sm:rounded-2xl transition-all duration-200',
                   pathname === '/settings' 
-                    ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 shadow-sm border border-blue-100' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    ? 'bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 shadow-sm border border-blue-100 dark:border-blue-800' 
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100'
                 )}
               >
                 <CogIcon className={cn(
                   'mr-3 sm:mr-4 h-5 w-5',
-                  pathname === '/settings' ? 'text-blue-600' : 'text-gray-500'
+                  pathname === '/settings' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400'
                 )} />
                 <span className="text-sm sm:text-base">Settings</span>
               </Link>
